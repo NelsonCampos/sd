@@ -3,12 +3,15 @@ import java.rmi.RMISecurityManager;
 
 public class Server
 {
-public static void main(String[] argv)
+
+public Server()
 	{
 	if (System.getSecurityManager() == null)
-		{
 		System.setSecurityManager(new SecurityManager());
-		}
+	}
+public static void main(String[] argv)
+	{
+	
 	try
 		{
 		Naming.rebind("Hello", new Hello("Hello, world!"));
