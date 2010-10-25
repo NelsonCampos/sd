@@ -1,7 +1,7 @@
 import java.rmi.RemoteException;
 
 
-public class Repository implements RepositoryInterface
+public class RepositoryList implements RepositoryListInterface
 {
 
 	public Session getSession(Credential cred) throws RemoteException
