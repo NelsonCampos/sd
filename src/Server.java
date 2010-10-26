@@ -11,15 +11,16 @@ public Server()
 	}
 public static void main(String[] argv)
 	{
-	
 	try
 		{
-		Naming.rebind("Hello", new Hello("Hello, world!"));
-		System.out.println("Hello Server is ready.");
+		RepositoryList list= new RepositoryList();
+		list.addUser("username1", "password1");
+		Naming.rebind("repositorylist", list);
+		System.out.println("Server is ready.");
 		}
 	catch (Exception e)
 		{
-		System.out.println("Hello Server failed: " + e);
+		System.out.println("Server failed: " + e);
 		}
 	}
 

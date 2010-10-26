@@ -3,12 +3,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 
-public class RepositoryFile implements Serializable
+public class RepositoryFile
 {
 public Date lastmodtime;
 public byte[] content_hash;
 public int path_hash;
 public File file; 
+public User owner;
 
 public RepositoryFile(String path)
 	{

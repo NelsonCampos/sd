@@ -7,13 +7,15 @@ public static void main(String[] argv)
 	{
 	try
 		{
-		HelloInterface hello = (HelloInterface) Naming
-				.lookup("//localhost/Hello");
-		System.out.println(hello.say());
+		RepositoryListInterface list = (RepositoryListInterface) Naming
+				.lookup("//localhost/repositorylist");
+		Credential mycred= new Credential("username1", "password1");
+		SessionInterface session= (SessionInterface) list.getSession(mycred);
+		System.out.println(session.test());
 		}
 	catch (Exception e)
 		{
-		System.out.println("HelloClient exception: " + e);
+		System.out.println("Client exception: " + e);
 		}
 	}
 }

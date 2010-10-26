@@ -4,5 +4,5 @@ import java.rmi.RemoteException;
 
 public interface RepositoryListInterface extends Remote
 {
-public Session getSession(Credential cred) throws RemoteException;
+public SessionInterface getSession(Credential cred) throws RemoteException;
 }
